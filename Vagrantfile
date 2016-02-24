@@ -13,9 +13,10 @@ Vagrant.configure(2) do |config|
     end
   end
 
-  config.vm.define 's3_backup' do |backup|
-    backup.vm.provision 'shell', path: 'init_backup.sh'
-    backup.vm.hostname = "s3_backup.local"
-    backup.vm.network "private_network", ip: "192.168.77.10"
-  end
+# not used
+  # config.vm.define 's3_backup' do |backup|
+  #   backup.vm.provision 'shell', path: 'init_backup.sh'
+  #   backup.vm.hostname = "s3_backup.local"
+  #   backup.vm.network "private_network", ip: "192.168.77.10"
+  # end
 end
